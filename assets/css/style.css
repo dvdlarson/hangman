@@ -1,0 +1,88 @@
+body {
+    background-image:url("../media/brickwall.png");
+    line-height:2em;
+
+
+}
+
+.container {
+    overflow: hidden;
+}
+
+#mainheader {
+    background-color:lightcyan;
+}
+
+#subheader {
+    background-color: aquamarine;
+}
+
+
+
+#sidebar {
+    padding:1rem;
+    max-height:50vh;
+    background-color:lightslategray;
+    position:relative;
+}
+
+
+#maskvalue {
+    letter-spacing:0.25em;
+}
+
+#gamearea {
+    padding:1rem;
+    max-height:50vh;
+    background-color: lightgreen;
+    float:left;
+    position:relative;
+}
+
+#statsrow {
+    background-color:lightpink;
+}
+
+.sidebarimg {
+    max-height:100%;
+    max-width:100%;
+}
+
+#sidebarpic, #sidebarbkgrnd {
+    opacity: 1;
+    position: absolute;
+    margin:auto;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+.bkgrnd {
+    z-index:2;
+}
+.img-responsive {
+    margin: 0 auto;
+}
+
+footer {
+    text-align:center;
+    font-weight:bold;
+    color:ghostwhite;
+    background-color:#696969;
+}
+
+#maskvalue {
+    font-weight:bold;
+    font-size:2rem;
+}
+
+
+tr {
+    padding:0px;
+}
+td {
+    text-align:center;
+    font-size:1.5em;
+
+}
