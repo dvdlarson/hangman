@@ -1,5 +1,6 @@
 body {
-    background-image:url("../media/brickwall.png");
+    background-image:url("../media/animals.png");
+    background-size: 100vw 100vh;
     line-height:2em;
 
 
@@ -32,7 +33,7 @@ body {
 }
 
 #gamearea {
-    padding:1rem;
+    padding:0rem;
     max-height:50vh;
     background-color: lightgreen;
     float:left;
@@ -43,9 +44,20 @@ body {
     background-color:lightpink;
 }
 
-.sidebarimg {
+@media screen and (max-width: 600px) {
+    #sidebar {
+        height:150px;
+    }
+    #letterRow {
+        display:block;
+    }
+
+}
+
+.sidebarimg, .sidebarbkgrndimg {
     max-height:100%;
     max-width:100%;
+    z-index:2;
 }
 
 #sidebarpic, #sidebarbkgrnd {
@@ -59,7 +71,7 @@ body {
 }
 
 .bkgrnd {
-    z-index:2;
+    z-index:1;
 }
 .img-responsive {
     margin: 0 auto;
@@ -86,3 +98,12 @@ td {
     font-size:1.5em;
 
 }
+
+.letter {
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    padding: 2px;
+    float: left;
+    margin: 2px;
+  }

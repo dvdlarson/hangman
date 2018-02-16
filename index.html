@@ -7,20 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-    <script src="./assets/javascript/game.js"></script>
     <script src="./assets/javascript/words.js"></script>
+    <script src="./assets/javascript/game.js"></script>
+
 </head>
 <body>
     <div class="container">
-        <div class="col-sm-12 h1 text-center" id="mainheader">HANGMANimals</div>
+        <div class="col-xs-12 col-md-12 h1 text-center" id="mainheader">HANGMANimals</div>
     <div class="col-sm-12 h3 text-center" id="subheader">Press ENTER to begin</div>
+    
         <div class="row">
-            <div class="col-sm-6" id="sidebar">
-                <img id="sidebarbkgrnd" class="bkgrnd sidebarimg img-responsive center-block" src="./assets/media/questionmark.png"/>
+               
+            <div class="col-xs-12 col-md-6" id="sidebar">
+                <img id="sidebarbkgrnd" style="z-index:2" class="bkgrnd sidebarimg img-responsive center-block" src=""/>
                 <img id="sidebarpic" class="sidebarimg img-responsive center-block" src="./assets/media/questionmark.png"/>
             </div>
             
-            <div class="col-sm-6" id="gamearea">
+            <div class="col-xs-12 col-md-6" id="gamearea">
                 <table class="table">
                     <tr>
                         <td>Your word:</td>
@@ -29,7 +32,7 @@
                         <td id="maskvalue">______</td>
                     </tr>
                     <tr>
-                        <td colspan="10">Guesses Remaining:</td>
+                        <td colspan="10">Wrong Guesses Remaining:</td>
                     </tr>
                     <tr>
                         <td id="guessremaining">10</td>
@@ -43,71 +46,33 @@
                 </table>
             </div>
         </div><!--end game row div-->
-        <!--
-        <div id="letterRow">
-                <p style="font-weight:bold; font-size:18px;">
- 
-                        <label>Choose a letter:</label>
-                         
-                        <br />
-                        <br />
-                         
-                        <a href="javascript:selectLetter('Q');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Q"></a>
-                        <a href="javascript:selectLetter('W');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="W"></a>
-                        <a href="javascript:selectLetter('E');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="E"></a>
-                        <a href="javascript:selectLetter('R');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="R"></a>
-                        <a href="javascript:selectLetter('T');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="T"></a>
-                        <a href="javascript:selectLetter('Y');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Y"></a>
-                        <a href="javascript:selectLetter('U');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="U"></a>
-                        <a href="javascript:selectLetter('I');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="I"></a>
-                        <a href="javascript:selectLetter('O');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="O"></a>
-                        <a href="javascript:selectLetter('P');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="P"></a>
-                        <br />
-                        <br />
-                        <a href="javascript:selectLetter('A');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="A"></a>
-                        <a href="javascript:selectLetter('S');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="S"></a>
-                        <a href="javascript:selectLetter('D');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="D"></a>
-                        <a href="javascript:selectLetter('F');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="F"></a>
-                        <a href="javascript:selectLetter('G');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="G"></a>
-                        <a href="javascript:selectLetter('H');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="H"></a>
-                        <a href="javascript:selectLetter('J');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="J"></a>
-                        <a href="javascript:selectLetter('K');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="K"></a>
-                        <a href="javascript:selectLetter('L');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="L"></a>
-                        <br />
-                        <br />
-                        <a href="javascript:selectLetter('Z');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Z"></a>
-                        <a href="javascript:selectLetter('X');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="X"></a>
-                        <a href="javascript:selectLetter('C');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="C"></a>
-                        <a href="javascript:selectLetter('V');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="V"></a>
-                        <a href="javascript:selectLetter('B');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="B"></a>
-                        <a href="javascript:selectLetter('N');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="N"></a>
-                        <a href="javascript:selectLetter('M');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="M"></a>
-                         
-                        </p>
+        
+        <div id="letterRow" class="col-xs-12 col-md-12 text-center"></div>
 
-
-
-        </div> <!--end letter row--> -->
-
-
-        <div id="statsrow" class="col-sm-12 text-center">
+        <div id="statsrow" class="col-xs-12 col-md-12 text-center">
             <h4 id="wincount">Total Wins: 0</h4>
             <h4 id="losscount">Total Losses: 0</h4>
             <h4 id="avgguesses">Average # of guesses per win: 0</h4>
             <h4 id="avgwrong">Average # of incorrect guesses per win: 0</h4>
         </div> <!--end stats row div-->
-        <footer class="footer footer-fixed-bottom">&copy;2018 David Larson</footer>
+        <div class="row" id="playAgainButton" style="display:none">
+            <div id="buttonRow" class="col-xs-12 col-md-12 text-center">
+                <button type="button" class="btn btn-primary btn-lg" onclick="initializeGame()">Play Again</button>
+            </div>
+        </div>
+        <footer class="footer navbar-fixed-bottom">&copy;2018 David Larson</footer>
+    
     </div><!--end main container div-->
 
     <script type="text/javascript">
+
+        document.onload=initializeGame();
         
         document.onkeyup=function(event) {
-            if (event.key==="Enter") {
-                initializeGame();
-            } else {
+            
             guessedLetter = event.key.toUpperCase();
-            gameStart(guessedLetter);
-            };
+            gameStart(guessedLetter,targetObject);
+          
             };
         
     </script>
