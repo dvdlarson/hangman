@@ -11,11 +11,11 @@ body {
 }
 
 #mainheader {
-    background-color:lightcyan;
+    background-color:rgb(255, 255, 255,0.0);
 }
 
 #subheader {
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255,0.5);
 }
 
 
@@ -23,7 +23,7 @@ body {
 #sidebar {
     padding:1rem;
     max-height:50vh;
-    background-color:lightslategray;
+    background-color:rgb(255, 255, 230,0.5);
     position:relative;
 }
 
@@ -35,18 +35,29 @@ body {
 #gamearea {
     padding:0rem;
     max-height:50vh;
-    background-color: lightgreen;
+    background-color: rgb(255, 255, 230,0.5);
+    
     float:left;
     position:relative;
 }
 
 #statsrow {
-    background-color:lightpink;
+    background-color:rgb(255, 255, 230,0.5);
 }
 
 @media screen and (max-width: 600px) {
     #sidebar {
         height:150px;
+    }
+    #letterRow {
+        display:block;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    #mainheader {
+        font-size:5rem;
     }
     #letterRow {
         display:block;

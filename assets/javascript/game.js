@@ -219,6 +219,10 @@ function endGame(result,targetObject)
     
 };
 
+function reset() {
+    location.reload();
+};
+
 function average(array) 
 {
     var sum=0

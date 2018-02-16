@@ -13,11 +13,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="col-xs-12 col-md-12 h1 text-center" id="mainheader">HANGMANimals</div>
-    <div class="col-sm-12 h3 text-center" id="subheader">Press ENTER to begin</div>
-    
+
         <div class="row">
-               
+            <div class="col-xs-12 col-md-12 h1 text-center" id="mainheader">HANGMANimals</div>
+            <div class="col-xs-12 col-md-12 h3 text-center" id="subheader">Press ENTER to begin</div>
+        </div>
+
+        <div class="row">
             <div class="col-xs-12 col-md-6" id="sidebar">
                 <img id="sidebarbkgrnd" style="z-index:2" class="bkgrnd sidebarimg img-responsive center-block" src=""/>
                 <img id="sidebarpic" class="sidebarimg img-responsive center-block" src="./assets/media/questionmark.png"/>
@@ -48,18 +50,23 @@
         </div><!--end game row div-->
         
         <div id="letterRow" class="col-xs-12 col-md-12 text-center"></div>
-
+    <div class="row">
         <div id="statsrow" class="col-xs-12 col-md-12 text-center">
             <h4 id="wincount">Total Wins: 0</h4>
             <h4 id="losscount">Total Losses: 0</h4>
             <h4 id="avgguesses">Average # of guesses per win: 0</h4>
             <h4 id="avgwrong">Average # of incorrect guesses per win: 0</h4>
         </div> <!--end stats row div-->
+    </div>
         <div class="row" id="playAgainButton" style="display:none">
-            <div id="buttonRow" class="col-xs-12 col-md-12 text-center">
+            <div id="buttonRow" class="col-xs-12 col-md-6 text-center">
                 <button type="button" class="btn btn-primary btn-lg" onclick="initializeGame()">Play Again</button>
             </div>
+            <div id="buttonRow" class="col-xs-12 col-md-6 text-center">
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="reset()">Reset</button>
+                </div>
         </div>
+    
         <footer class="footer navbar-fixed-bottom">&copy;2018 David Larson</footer>
     
     </div><!--end main container div-->
