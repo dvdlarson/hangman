@@ -118,14 +118,7 @@ td {
 
 }
 
-.letter {
-    width: 30px;
-    height: 30px;
-    border-style: solid;
-    padding: 2px;
-    float: left;
-    margin: 2px;
-  }
+
 
 .playagain {
     font-size:2rem;
@@ -133,10 +126,10 @@ td {
 }
 
 .letter {
-    width: 30px;
-    height: 30px;
+    width: 2.1rem;
+    height: 2.1rem;
     border-style: solid;
-    padding: 2px;
+    padding: 0px;
     font-size:2rem;
     float: left;
     margin: 2px;

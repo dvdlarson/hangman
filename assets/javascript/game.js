@@ -190,22 +190,22 @@ function endGame(result,targetObject)
             audio.play();
             
           //  elm("sidebarbkgrnd").src=bkgrnd;  
-            alert("You Lose!")         
+                    
             elm("subheader").innerHTML="You lose! The answer was: " + targetWord;
             
             elm("losscount").innerHTML="Total Losses: " + lossCount;
-            nextGame();
-            initializeGame();
+          //  nextGame();
+         //   initializeGame();
            
         };
 
-        function nextGame() {
+      /*  function nextGame() {
             for (var i=3;i>0,i--;) 
             {
             elm("subheader").innerHTML="Next game begins in: " + i;
             wait(1000);
             }
-        }
+        } */
 
 /* function playAgain() {
     wait(2000);
