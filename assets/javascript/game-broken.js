@@ -1,4 +1,6 @@
 
+
+
 var currentMaskValue="";
 var targetWord="";
 var targetObject;
@@ -16,7 +18,7 @@ var lossCount = 0;
 var winPic="";
 var winSound="";
 var bkgrnd="";
-
+var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 function elm(elementID) {
     return document.getElementById(elementID);
@@ -30,22 +32,20 @@ function initializeGame() {
 elm("playAgainButton").setAttribute("style","display:none");
 guessRemaining=6;
 elm("guessremaining").innerHTML=guessRemaining;
-elm("subheader").innerHTML="Press any key or click to guess a letter.";
+elm("subheader").innerHTML="Press any key to guess a letter.";
 elm("sidebarpic").src="./assets/media/questionmark.png";
-elm("sidebarbkgrnd").src="";
-//makeButtons();
 guessedArray=[];
 currentMaskValue="";
 elm("lettersguessed").innerText="";
 guessCount=0;
 wrongGuessCount=0;
-var wordList = [word1,word2,word3,word4,word5,word6,word7];
-//get random number, then target object from wordList, and all attributes for target word
+var wordList = [word1,word2];
+//, {word2}, {word3}, {word4}, {word5}, {word6}, {word7}
 var rand = Math.floor(Math.random() * wordList.length);
 targetObject = new Object(wordList[rand]);
  console.log("game initialized: target object:" + targetObject);
+ targetID;
  targetWord = targetObject.value;
- targetID=targetObject.id;
  currentMaskValue=targetObject.maskValue;
  winPic=targetObject.winPic;
  bkgrnd=targetObject.bkgrnd;
@@ -65,11 +65,11 @@ gameStart();
 };
 
 //gamestart by clicking letter in keyboard layout
-
+/* 
 function selectLetter(letter) {
     guessedLetter=letter;
-    gameStart(letter);
-};
+    gameStart(guessedLetter);
+}; */
 
 function gameStart(letter,targetObject) {
     console.log("choice: "+ letter);
@@ -81,7 +81,15 @@ function gameStart(letter,targetObject) {
     guessedLetter=letter;
   //  guessedLetter=changeCase(letter); //convert letter to upper case
   //  console.log("converted letter: " + guessedLetter);
-    if (checkIfGuessed(guessedLetter,guessedArray)) {return;};//if letter has been guessed, do nothing
+
+  //funky work-around for problem - on page load, wrong guesses are decremented by 1 and blank character is pushed into guessed characters array
+    /* if (guessedLetter===""){
+        changeCase(guessedLetter);
+        guessCount++;
+        return;
+        }; */
+    if(checkIfGuessed(guessedLetter,guessedArray)===false) {//if letter has not been guessed and is not blank, 
+    
     guessedArray.push(guessedLetter);//push guessed letter into guessed letter array
     elm("lettersguessed").innerHTML=guessedArray;//replace guessed letter section with updated guessed letter array
     guessCount++;//increment total guess counter
@@ -89,7 +97,7 @@ function gameStart(letter,targetObject) {
     if (guessRemaining===0) {  //check to see if any guesses are remaining
         endGame("lose");
     };
-    
+};
 
 
 //};
@@ -116,8 +124,8 @@ function checkAndReplace(guessedLetter,targetWord,currentMaskValue)
     
     
     var replaceCount=0;
-    
-    for (var i=0;i<targetWord.length;i++)
+ //loop through target word and replace corresponding index of masked value//   
+    for (var i=0;i<targetWord.length;i++) 
     { console.log("char: "+targetWord.charAt(i));
         if (targetWord.charAt(i)===guessedLetter) 
         {   console.log("match");
@@ -157,10 +165,10 @@ function endGame(result,targetObject)
 
     wrongGuesses.push(wrongGuessCount);
     var avgWrong=average(wrongGuesses);
-    elm("avgwrong").innerHTML="Average # of incorrect guesses per win: " + avgWrong.toFixed(2);
+    elm("avgwrong").innerHTML="Average # of incorrect guesses per win:" + avgWrong;
     totalGuesses.push(guessCount);
     var avgGuess=average(totalGuesses);
-    elm("avgguesses").innerHTML="Average # of guesses per win: " + avgGuess.toFixed(2);
+    elm("avgguesses").innerHTML="Average # of guesses per win: " + avgGuess;
     elm("playAgainButton").setAttribute("style","display:block");
 
     if (result==="win") 
@@ -214,6 +222,7 @@ function endGame(result,targetObject)
         initializeGame();
         }
     else {location.reload();};
+
     };   */
     
 };
@@ -239,4 +248,7 @@ function wait(ms){
     while(end < start + ms) {
       end = new Date().getTime();
    }
-};
+ };
+
+
+

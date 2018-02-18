@@ -18,6 +18,9 @@ body {
     background-color: rgb(255, 255, 255,0.5);
 }
 
+#letterRow {
+    background-color: rgb(255, 255, 230,0.5);
+}
 
 
 #sidebar {
@@ -51,6 +54,8 @@ body {
     }
     #letterRow {
         display:block;
+        padding-top:1rem;
+        padding-bottom:1rem;
     }
 
 }
@@ -61,6 +66,9 @@ body {
     }
     #letterRow {
         display:block;
+        padding-top:1rem;
+        padding-bottom:1rem;
+        padding-left:10rem;
     }
 
 }
@@ -117,4 +125,27 @@ td {
     padding: 2px;
     float: left;
     margin: 2px;
+  }
+
+.playagain {
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.letter {
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    padding: 2px;
+    font-size:2rem;
+    float: left;
+    margin: 2px;
+  }
+
+  .letter-button-color {
+    color: black;
+  }
+
+  button:active {
+      background-color:lightpink;
   }

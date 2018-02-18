@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
     <script src="./assets/javascript/words.js"></script>
     <script src="./assets/javascript/game.js"></script>
+   
 
 </head>
 <body>
@@ -16,7 +17,7 @@
 
         <div class="row">
             <div class="col-xs-12 col-md-12 h1 text-center" id="mainheader">HANGMANimals</div>
-            <div class="col-xs-12 col-md-12 h3 text-center" id="subheader">Press ENTER to begin</div>
+            <div class="col-xs-12 col-md-12 h3 text-center" id="subheader">Press any key or click a letter to choose.</div>
         </div>
 
         <div class="row">
@@ -48,8 +49,44 @@
                 </table>
             </div>
         </div><!--end game row div-->
-        
-        <div id="letterRow" class="col-xs-12 col-md-12 text-center"></div>
+        <div class="row">
+        <div id="letterRow" class="col-xs-12 col-md-12 text-center">
+        <button class="letter-button letter letter-button-color" value="A" onclick="gameStart(value)">A</button>
+        <button class="letter-button letter letter-button-color" value="B" onclick="gameStart(value)">B</button> 
+        <button class="letter-button letter letter-button-color" value="C" onclick="gameStart(value)">C</button> 
+        <button class="letter-button letter letter-button-color" value="D" onclick="gameStart(value)">D</button> 
+        <button class="letter-button letter letter-button-color" value="E" onclick="gameStart(value)">E</button>
+        <button class="letter-button letter letter-button-color" value="F" onclick="gameStart(value)">F</button> 
+        <button class="letter-button letter letter-button-color" value="G" onclick="gameStart(value)">G</button> 
+        <button class="letter-button letter letter-button-color" value="H" onclick="gameStart(value)">H</button> 
+        <button class="letter-button letter letter-button-color" value="I" onclick="gameStart(value)">I</button> 
+        <button class="letter-button letter letter-button-color" value="J" onclick="gameStart(value)">J</button> 
+        <button class="letter-button letter letter-button-color" value="K" onclick="gameStart(value)">K</button> 
+        <button class="letter-button letter letter-button-color" value="L" onclick="gameStart(value)">L</button> 
+        <button class="letter-button letter letter-button-color" value="M" onclick="gameStart(value)">M</button> 
+        <button class="letter-button letter letter-button-color" value="N" onclick="gameStart(value)">N</button> 
+        <button class="letter-button letter letter-button-color" value="O" onclick="gameStart(value)">O</button> 
+        <button class="letter-button letter letter-button-color" value="P" onclick="gameStart(value)">P</button> 
+        <button class="letter-button letter letter-button-color" value="Q" onclick="gameStart(value)">Q</button> 
+        <button class="letter-button letter letter-button-color" value="R" onclick="gameStart(value)">R</button> 
+        <button class="letter-button letter letter-button-color" value="S" onclick="gameStart(value)">S</button> 
+        <button class="letter-button letter letter-button-color" value="T" onclick="gameStart(value)">T</button> 
+        <button class="letter-button letter letter-button-color" value="U" onclick="gameStart(value)">U</button> 
+        <button class="letter-button letter letter-button-color" value="V" onclick="gameStart(value)">V</button> 
+        <button class="letter-button letter letter-button-color" value="W" onclick="gameStart(value)">W</button> 
+        <button class="letter-button letter letter-button-color" value="X" onclick="gameStart(value)">X</button> 
+        <button class="letter-button letter letter-button-color" value="Y" onclick="gameStart(value)">Y</button> 
+        <button class="letter-button letter letter-button-color" value="Z" onclick="gameStart(value)">Z</button> 
+
+
+
+
+        </div>
+
+       </div>
+
+
+
     <div class="row">
         <div id="statsrow" class="col-xs-12 col-md-12 text-center">
             <h4 id="wincount">Total Wins: 0</h4>
@@ -59,11 +96,11 @@
         </div> <!--end stats row div-->
     </div>
         <div class="row" id="playAgainButton" style="display:none">
-            <div id="buttonRow" class="col-xs-12 col-md-6 text-center">
-                <button type="button" class="btn btn-primary btn-lg" onclick="initializeGame()">Play Again</button>
+            <div id="buttonRow" class="col-xs-12 col-md-12 text-center">
+                <button type="button" class="playagain btn btn-primary btn-block" onclick="initializeGame()">Play Again</button>
             </div>
-            <div id="buttonRow" class="col-xs-12 col-md-6 text-center">
-                    <button type="button" class="btn btn-secondary btn-lg" onclick="reset()">Reset</button>
+            <div id="buttonRow" class="col-xs-12 col-md-12 text-center">
+                    <button type="button" class="playagain btn btn-secondary btn-block" onclick="reset()">Reset</button>
                 </div>
         </div>
     
